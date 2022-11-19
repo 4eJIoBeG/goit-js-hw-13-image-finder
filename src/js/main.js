@@ -4,7 +4,7 @@ import root from './vars';
 import createMarkup from './createMarkup';
 
 const searchRequest = () => {
-  if (!serviceApi.query) {
+  if (!root.inputImageRequest.value) {
     root.loadMoreBtn.classList.add('hide');
     root.gallery.innerHTML = '';
     root.notification.classList.remove('hide');
