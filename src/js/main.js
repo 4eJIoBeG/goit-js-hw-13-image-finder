@@ -1,6 +1,7 @@
 import debounce from 'lodash.debounce';
 import serviceApi from './serviceApi';
 import root from './vars';
+import createMarkup from './createMarkup';
 
 const searchRequest = () => {
   serviceApi.query = root.inputImageRequest.value;
@@ -19,7 +20,7 @@ const searchRequest = () => {
         root.notification.classList.remove('hide');
         return;
       }
-      serviceApi.createMarkup(imagesData);
+      createMarkup(imagesData);
       root.notification.classList.add('hide');
       root.loadMoreBtn.classList.remove('hide');
     })
@@ -36,7 +37,7 @@ const loadMore = () => {
       if (!imagesData.next_page) {
         root.loadMoreBtn.classList.add('hide');
       }
-      serviceApi.createMarkup(imagesData);
+      createMarkup(imagesData);
       serviceApi.setImageIndex();
       serviceApi.scrollToEnd();
     })

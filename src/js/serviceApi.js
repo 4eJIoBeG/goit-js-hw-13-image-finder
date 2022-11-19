@@ -1,5 +1,3 @@
-import card from '../partials/card.hbs';
-import root from './vars';
 const apiKey = '563492ad6f91700001000001936884ad8290495a828d68f994011b93';
 
 export default {
@@ -17,10 +15,6 @@ export default {
         this.incrementPage();
         return imagesData;
       });
-  },
-  createMarkup(data) {
-    const galery = card(data);
-    root.gallery.insertAdjacentHTML('beforeend', galery);
   },
   resetPage() {
     this.page = 1;
