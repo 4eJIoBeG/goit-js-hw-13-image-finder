@@ -5,6 +5,7 @@ import createMarkup from './createMarkup';
 
 const searchRequest = () => {
   if (!serviceApi.query) {
+    root.loadMoreBtn.classList.add('hide');
     root.gallery.innerHTML = '';
     root.notification.classList.remove('hide');
     return;
