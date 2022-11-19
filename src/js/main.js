@@ -4,12 +4,12 @@ import root from './vars';
 import createMarkup from './createMarkup';
 
 const searchRequest = () => {
-  serviceApi.query = root.inputImageRequest.value;
   if (!serviceApi.query) {
     root.gallery.innerHTML = '';
     root.notification.classList.remove('hide');
     return;
   }
+  serviceApi.query = root.inputImageRequest.value;
   root.gallery.innerHTML = '';
   serviceApi.resetPage();
   serviceApi
