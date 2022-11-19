@@ -1,0 +1,13 @@
+{{#each photos}}
+    <li class="gallery__item">
+            <a class="gallery__link" href="{{src.large}}">
+            <img
+            class="gallery__image"
+            src="{{src.medium}}"
+            data-source="{{src.large}}"
+            data-index="{{@index}}"
+            alt="{{alt}}"
+            />
+        </a>
+    </li>
+{{/each}}
